@@ -54,7 +54,7 @@ export default defineConfig({
 					tags: [],
 				}),
 				ui: {
-					dateFormat: "MMM DD YYYY",
+					dateFormat: "YYYY MM DD",
 					filename: {
 						readonly: false,
 						slugify: (values) => {
@@ -105,10 +105,6 @@ export default defineConfig({
 								label: "Learning",
 							},
 							{
-								value: "meta",
-								label: "Meta",
-							},
-							{
 								value: "work",
 								label: "Work",
 							},
@@ -126,14 +122,14 @@ export default defineConfig({
 						label: "Added",
 						name: "added",
 						type: "datetime",
-						dateFormat: "MMM DD YYYY",
+						dateFormat: "YYYY MM DD",
 						required: true,
 					},
 					{
 						label: "Updated",
 						name: "updated",
 						type: "datetime",
-						dateFormat: "MMM DD YYYY",
+						dateFormat: "YYYY MM DD",
 					},
 					{
 						type: "rich-text",
