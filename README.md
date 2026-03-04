@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/workshop logo dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/workshop logo light.svg">
+    <img alt="Steve's Workshop" src="public/workshop logo light.svg" width="300">
+  </picture>
+</p>
+
 # Steve's Workshop Blog
 
 ![Astro](https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE)
