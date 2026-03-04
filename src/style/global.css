@@ -34,6 +34,7 @@ html,
 body {
 	margin: auto;
 	max-width: 70ch;
+	padding: 0 24px;
 	background-color: var(--white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -144,13 +145,14 @@ nav {
 	background: var(--transwhite);
 	-webkit-backdrop-filter: blur(1px);
 	backdrop-filter: blur(1px);
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	flex-wrap: wrap;
 }
 
 nav a {
 	margin: 25px 0;
-}
-nav a:not(:last-child) {
-	padding: 0 12px 0 0;
 }
 
 hr {
@@ -279,8 +281,3 @@ ul li time {
 	white-space: nowrap;
 }
 
-@media (max-width: 600px) {
-	nav a:not(:last-child) {
-		padding: 0;
-	}
-}
