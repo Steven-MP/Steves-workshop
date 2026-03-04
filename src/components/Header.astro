@@ -6,9 +6,9 @@ import { title, subtitle } from "../settings/settings.json"
 
 <header>
 	<div class="header-section">
+		<img class="site-logo logo-light" src="/workshop logo light.svg" alt="Steve's Workshop logo" />
+		<img class="site-logo logo-dark" src="/workshop logo dark.svg" alt="Steve's Workshop logo" />
 		<div class="header-frame">
-			<h1>{title}</h1>
-			<h2>{subtitle}</h2>
 		</div>
 	</div>
 </header>
@@ -21,4 +21,35 @@ import { title, subtitle } from "../settings/settings.json"
 	h2 {
 		margin: 0.5em 0;
 	}
+
+	.site-logo {
+		height: 240px;
+		width: auto;
+		margin-right: 1.25rem;
+	}
+
+	/* Light mode: show light logo */
+	.logo-light { display: block; }
+	.logo-dark  { display: none; }
+
+	/* Dark mode via system preference */
+	@media (prefers-color-scheme: dark) {
+		.logo-light { display: none; }
+		.logo-dark  { display: block; }
+	}
 </style>
+
+<script is:inline>
+	/* Sync logo visibility with the dark-mode class set by JS toggle */
+	function syncLogos() {
+		const isDark = document.body.classList.contains("dark-mode");
+		document.querySelectorAll(".logo-light").forEach(el => el.style.display = isDark ? "none" : "");
+		document.querySelectorAll(".logo-dark").forEach(el => el.style.display = isDark ? "block" : "");
+	}
+
+	// Run on load
+	syncLogos();
+
+	// Watch for class changes on body (dark mode toggle)
+	new MutationObserver(syncLogos).observe(document.body, { attributes: true, attributeFilter: ["class"] });
+</script>
