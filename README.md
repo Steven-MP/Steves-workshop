@@ -1,8 +1,8 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="public/workshop logo dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="public/workshop logo light.svg">
-    <img alt="Steve's Workshop" src="public/workshop logo light.svg" width="300">
+    <source media="(prefers-color-scheme: dark)" srcset="public/Steve's Workshop Logo-Dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="public/Steve's Workshop Logo-Light.svg">
+    <img alt="Steve's Workshop" src="public/Steve's Workshop Logo-Light.svg" width="300">
   </picture>
 </p>
 
